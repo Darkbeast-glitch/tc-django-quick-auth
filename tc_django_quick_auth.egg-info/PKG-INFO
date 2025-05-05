@@ -1,11 +1,13 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.1
 Name: tc-django-quick-auth
-Version: 0.1.1
+Version: 0.1.2
 Summary: A reusable Django package for quick login and signup endpoints with optional JWT authentication
 Home-page: https://github.com/Darkbeast-glitch/django-quick-auth
 Author: Julius Boakye
 Author-email: juliusboakye@pythonghana.org
+License: UNKNOWN
 Keywords: django,authentication,jwt,login,signup,api
+Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.7
@@ -21,20 +23,6 @@ Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
-Requires-Dist: django>=3.2
-Requires-Dist: djangorestframework>=3.12
-Requires-Dist: djangorestframework-simplejwt>=5.2
-Dynamic: author
-Dynamic: author-email
-Dynamic: classifier
-Dynamic: description
-Dynamic: description-content-type
-Dynamic: home-page
-Dynamic: keywords
-Dynamic: license-file
-Dynamic: requires-dist
-Dynamic: requires-python
-Dynamic: summary
 
 # Django Quick Auth
 
@@ -69,7 +57,9 @@ Add `django_quick_auth` to your `INSTALLED_APPS` in your Django project's settin
 ```python
 INSTALLED_APPS = [
     # ...
-    'django_quick_auth', 
+    "rest_framework",
+    "rest_framework_simplejwt",
+    'django_quick_auth',
 ]
 ```
 
@@ -105,7 +95,7 @@ If you want to use JWT authentication, configure the JWT settings in your projec
 # JWT Settings
 QUICK_AUTH = {
     'USE_JWT': True,
-    'JWT_SECRET_KEY': 'your-secret-key',  
+    'JWT_SECRET_KEY': 'your-secret-key',
     'JWT_ALGORITHM': 'HS256',
     'JWT_EXPIRATION_DELTA': 24 * 60 * 60,  # Token expiry time in seconds (24 hours)
     'JWT_REFRESH_EXPIRATION_DELTA': 7 * 24 * 60 * 60,  # Refresh token expiry time in seconds (7 days)
@@ -214,3 +204,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+

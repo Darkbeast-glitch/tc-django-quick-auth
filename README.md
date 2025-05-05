@@ -31,7 +31,9 @@ Add `django_quick_auth` to your `INSTALLED_APPS` in your Django project's settin
 ```python
 INSTALLED_APPS = [
     # ...
-    'django_quick_auth', 
+    "rest_framework",
+    "rest_framework_simplejwt",
+    'django_quick_auth',
 ]
 ```
 
@@ -67,7 +69,7 @@ If you want to use JWT authentication, configure the JWT settings in your projec
 # JWT Settings
 QUICK_AUTH = {
     'USE_JWT': True,
-    'JWT_SECRET_KEY': 'your-secret-key',  
+    'JWT_SECRET_KEY': 'your-secret-key',
     'JWT_ALGORITHM': 'HS256',
     'JWT_EXPIRATION_DELTA': 24 * 60 * 60,  # Token expiry time in seconds (24 hours)
     'JWT_REFRESH_EXPIRATION_DELTA': 7 * 24 * 60 * 60,  # Refresh token expiry time in seconds (7 days)

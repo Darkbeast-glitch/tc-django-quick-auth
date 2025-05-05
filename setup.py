@@ -10,7 +10,7 @@ if not os.path.exists("LICENSE"):
 
 setup(
     name="tc-django-quick-auth",
-    version="0.1.1",
+    version="0.1.2",
     author="Julius Boakye",
     author_email="juliusboakye@pythonghana.org",
     description="A reusable Django package for quick login and signup endpoints with optional JWT authentication",
